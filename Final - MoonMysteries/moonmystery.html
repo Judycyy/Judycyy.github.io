@@ -1,0 +1,324 @@
+<!doctype html>
+      <html>
+        <head>
+          <title>Moon Mystery</title>
+          <link rel="shortcut icon" href="moon.png">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+      	  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+      	  <script src="mystery.js"></script>
+
+          <style>
+
+        span {
+          color: #CAFFFF;
+        }
+
+
+        #text {
+          position: absolute;
+          color:#B9B9FF;
+          text-shadow: 1px 1px 1px #BEBEBE;
+          border-top: 4px dotted floralwhite;
+          border-bottom: 4px dotted floralwhite;
+          width: 250px;
+          length: 50px;
+          left: 525px;
+          top: 440px;
+          font-size: 30px;
+          font-family: "Times New Roman", Times, serif;
+          text-align: center;
+          cursor: crosshair;
+        }
+
+        #china {
+          display: none;
+        }
+
+
+        #text:hover {
+          border: 8px dashed floralwhite;
+          font-size: 36px;
+        }
+
+        #sky{
+          position: fixed;
+          width: 100%;
+          height: 100%;
+          opacity: 1;
+          right: 0px;
+          bottom: 0px;
+          top: 0px;
+          bottom: 0px;
+          z-index: -5;
+        }
+
+        #shining{
+          position: fixed;
+          display: none;
+          width: 100%;
+          height: 100%;
+          opacity: 1;
+          right: 0px;
+          bottom: 0px;
+          top: 0px;
+          bottom: 0px;
+          z-index: -1;
+        }
+
+
+        #goldmoon {
+          position: absolute;
+          width: 300px;
+          height: 300px;
+          top: 140px;
+          left: 525px;
+          z-index: -1;
+        }
+
+        #goldmoon:hover {
+          transform: translateY(-90px);
+          width: 320px;
+          height: 320px;
+          left: 500px;
+        }
+
+        #change {
+          display: none;
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          width: 580px;
+          z-index: -2;
+        }
+
+        #change:hover {
+          transform: skew(12deg,12deg);
+          width: 700px;
+          z-index: -2;
+        }
+
+
+        #wugang {
+          display: none;
+          position: absolute;
+          bottom: -20px;
+          width: 380px;
+          left: 10px;
+          z-index: -2;
+        }
+
+        #wugang:hover {
+           transform: translate(25px, -25px);
+           width: 420px;
+        }
+
+
+        #rabbit {
+          display: none;
+          position: absolute;
+          top: -27px;
+          right: -37px;
+          width: 360px;
+          z-index: -2;
+        }
+
+        #rabbit:hover {
+          transform: rotateZ(30deg);
+          width: 390px;
+        }
+
+        #nichang {
+          display: none;
+          position: absolute;
+          bottom: -15px;
+          right: 100px;
+          width: 220px;
+          z-index: -2;
+        }
+
+        #nichang:hover {
+          transform: skew(15deg,15deg);
+          width: 280px;
+        }
+
+        #mooncake {
+          display: none;
+          position: absolute;
+          bottom: -280px;
+          left: 500px;
+          width: 310px;
+          z-index: -2;
+        }
+
+        #mooncake:hover {
+          transform: translateY(-30px);
+          width: 350px;
+        }
+
+        body {
+          background-color: black;
+        }
+
+        #story1 {
+          position: absolute;
+          display: none;
+          top: 80px;
+          left: 360px;
+          width: 580px;
+          height: 500px;
+          border: 15px double  #4682B4;
+          background-color: #FFFAF0;
+          font-size: 24px;
+          font-family: "Times New Roman", Times, serif;
+          text-align: left ;
+          cursor: e-resize;
+          line-height: 1.5;
+          z-index: 10;
+        }
+
+        #story2 {
+          position: absolute;
+          display: none;
+          top: 80px;
+          left: 360px;
+          width: 580px;
+          height: 500px;
+          border: 15px double  #4682B4;
+          background-color: #FFFAF0;
+          font-size: 24px;
+          font-family: "Times New Roman", Times, serif;
+          text-align: left;
+          cursor: e-resize;
+          line-height: 1.5;
+          z-index: 10;
+        }
+
+        #story3 {
+          position: absolute;
+          display: none;
+          top: 80px;
+          left: 360px;
+          width: 580px;
+          height: 500px;
+          border: 10px  dashed #4682B4;
+          background-color: #FFFAF0;
+          font-size: 24px;
+          font-family: "Times New Roman", Times, serif;
+          text-align: left;
+          cursor: e-resize;
+          line-height: 1.5;
+          z-index: 10;
+        }
+
+        #story4 {
+          position: absolute;
+          display: none;
+          top: 80px;
+          left: 360px;
+          width: 580px;
+          height: 500px;
+          border: 15px Inset #4682B4;
+          background-color: #FFFAF0;
+          font-size: 24px;
+          font-family: "Times New Roman", Times, serif;
+          text-align: left;
+          cursor: e-resize;
+          line-height: 1.5;
+          z-index: 10;
+        }
+
+        #story5 {
+          position: absolute;
+          display: none;
+          top: 80px;
+          left: 360px;
+          width: 580px;
+          height: 500px;
+          border: 15px Outset #4682B4;
+          background-color: #FFFAF0;
+          font-size: 24px;
+          font-family: "Times New Roman", Times, serif;
+          text-align: left;
+          cursor: e-resize;
+          line-height: 1.5;
+          z-index: 10;
+        }
+
+        #story6 {
+          position: absolute;
+          display: none;
+          top: 80px;
+          left: 360px;
+          width: 580px;
+          height: 500px;
+          border: 15px groove #4682B4;
+          background-color: #FFFAF0;
+          font-size: 24px;
+          font-family: "Times New Roman", Times, serif;
+          text-align: left;
+          cursor: e-resize;
+          line-height: 1.5;
+          z-index: 10;
+        }
+
+        #story7 {
+          position: absolute;
+          display: none;
+          top: 80px;
+          left: 360px;
+          width: 580px;
+          height: 500px;
+          border: 15px groove #4682B4;
+          background-color: #FFFAF0;
+          font-size: 24px;
+          font-family: "Times New Roman", Times, serif;
+          text-align: left;
+          cursor: e-resize;
+          line-height: 1.5;
+          z-index: 10;
+        }
+
+          </style>
+        </head>
+        <body>
+          <img id=sky src=clear-stars.jpg>
+          <img id=shining src=shiningstars.gif>
+          <img id=goldmoon src=goldmoon.png>
+          <img id=wugang src=wugang.png>
+          <img id=change src=change.png>
+          <img id=rabbit src=rabbit2.png>
+          <img id=nichang src=nichang.png>
+          <img id=mooncake src=mooncake.png>
+
+          <div id=text>M<span>oo</span>n Mysteri<span>es</span><br><span id=china>From Ancient China</span></div>
+
+          <div id=story1>In ancient times, ten suns existed in the sky and the extreme heat made people’s lives very difficult. It was the hero Hou Yi, who, using his great strength, shot down nine of the ten suns. Later, Hou Yi married a beautiful and kind-hearted woman named Chang E and they lived a happy life.
+            <br>One day, the Queen of Heaven presented Hou Yi an elixir which, if taken, would help him to ascend immediately to heaven and become a god. Hou Yi took it home and asked Chang E to keep it safe. One day, Hou Yi went out hunting. Unfortunately, a villain named Pengmeng found out and broke into their home. He demanded Chang E hand over the elixir.
+            <br>In a moment of desperation, Chang E swallowed the elixir. Reluctant to leave her husband, Cheng E tried her best to fly</div>
+          <div id=story2>to the moon, the nearest place to the earth in heaven. Hou Yi missed Chang E a lot, so on the day of the full moon, he took many foods that Chang E liked and placed them on a ceremonial table.
+            <br>His custom was later followed by some people who pray to the Goddess Chang E for good luck. This practice gradually evolved into the Mid-Autumn Festival.</div>
+
+          <div id=story3>A long time ago, during the Han Dynasty (202 BC - 220 AD), there was a man named Wu Gang. He was such a pious man that he, himself, was able to become immortal.
+            <br>However, when in heaven, he made a mistake and was banished to the moon to chop the laurel tree. This laurel tree grew in front of the Moon Palace where flourished and became tall. Each time Wu Gang chopped the tree, it grew back immediately. This happened again and again and Wu Gang was never able to cut it down. The endless, arduous hard work was a punishment for Wu Gang.
+            <br>If you look carefully at the moon on a clear night, you can see a black shadow, which is Wu Gang.</div>
+
+          <div id=story4>Once upon a time, there were three immortals who were reincarnated into three poor old people. They were hungry and begged food from a fox, a monkey, and a rabbit. The fox and monkey both gave food to the immortals.
+            <br>However, the rabbit did not have any food. It said to the immortals: “You can eat me,” and jumped into the fire. The immortals were so moved by the rabbit, they sent it to the moon to become an immortal jade rabbit.
+            <br>Ever since then, the Chinese jade rabbit stays in the Moon Palace to accompany Chang E where it compounds immortal medicine for those living in heaven.
+            <br>This is the “rabbit in the moon legend”, also known as the “jade rabbit story.” </div>
+
+          <div id=story5>According to the legend, Li Longji, an Emperor of the Tang Dynasty (618-907AD), was appreciating the moon in the Mid-Autumn Festival with a Taoist master and a Taoist priest.
+            <br>Suddenly, Li Longji had the desire to visit the Moon Palace. So the three men stood on the clouds and flew up to the moon. They planned to roam in the Moon Palace.
+            <br>At that moment, Li Longji heard a song sung by the fairies. It was pleasant, lovely, and moving. Li Longji was good at music, and this melody affected him deeply, so it was easy for him to remember it.
+            <br>After going back, he recalled the melody and composed a song, which is the historically famous “Melody of White Feathers Garment”.</div>
+
+          <div id=story6>There is a Mid-Autumn Festival legend that really happened.
+            <br>In the late Yuan Dynasty (1271 - 1368 AD), people in many parts of the country could not bear the cruel rule of the emperor and rose up in revolt. Yuanzhang Zhu, the founder of the Ming Dynasty (1368 - 1644 AD), united the different resistance forces and wanted to organize an uprising. However, due to the rigid control by the government, it was very difficult to pass messages along.
+            <br>The counselor, Bowen Liu, later came up with the great idea of hiding notes in mooncakes. The message said “uprising on the night of Mid-Autumn Day”. He sent the mooncakes to the different resistance forces.
+            <br>The uprising turned out to be very successful and Zhu was  </div>
+            <div id=story7> so happy that he awarded his subjects with mooncakes.
+            <br>Since then, eating mooncakes continues to be a custom during the Mid-Autumn Festival.</div>
+
+
+        </body>
+      </html>

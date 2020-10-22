@@ -1,0 +1,186 @@
+<!doctype html>
+      <html>
+        <head>
+          <title>Young Poetry</title>
+          <link rel="shortcut icon" href="flower.png">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+          <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+          <script src="poetry.js"></script>
+
+          <style>
+
+
+          body {
+            background-color:#8FBC8F;
+          }
+
+         span{
+        color: #006030;
+        cursor: wait;
+         }
+         #eternal:hover{
+         font-size: 40px;
+         text-decoration: overline;
+         cursor: cell;
+         border: 5px dashed #778899
+         }
+
+         #baby:hover{
+           border: 10px outset #778899
+         }
+
+         #old:hover{
+           border: 10px outset #778899
+         }
+
+         #past:hover{
+           border: 10px groove #778899
+         }
+
+         #future:hover{
+           border: 10px groove #778899
+         }
+
+         #present:hover{
+           border: 10px groove #778899
+         }
+
+
+          #A{
+        color: #A23400;
+        line-height: normal;
+        position: absolute;
+        text-shadow: 1px 1px 1px #DCDCDC;
+        border-top: 6px double floralwhite;
+        width: 550px;
+        height: 460px;
+        right: 20px;
+        top: 20px;
+        font-size: 32px;
+        font-family: "Times New Roman", Times, serif;
+        text-align: justify;
+        cursor: crosshair;
+          }
+          #B{
+        color: #483D8B;
+        line-height: 1.8;
+        position: absolute;
+        text-shadow: 1px 1px 1px #DCDCDC;
+        width: 550px;
+        height: 450px;
+        right: 20px;
+        top: 210px;
+        font-size: 32px;
+        font-family: "Times New Roman", Times, serif;
+        text-align: justify;
+        cursor: help;
+          }
+          #C{
+        color: #AD5A5A;
+        position: absolute;
+        text-shadow: 1px 1px 1px #DCDCDC;
+        border-bottom: 6px double floralwhite;
+        width: 550px;
+        height: 150px;
+        right: 20px;
+        top: 330px;
+        font-size: 32px;
+        font-family: "Times New Roman", Times, serif;
+        text-align: justify;
+        cursor: move;
+          }
+          #spring{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        opacity: .3;
+        right: 0px;
+        bottom: 0px;
+        top: 0px;
+        bottom: 0px;
+        z-index: -1;
+          }
+          #eternal:visited {
+          color: green;
+          }
+          #eternal:hover {
+          color: red;
+          }
+          #eternal:active {
+          color: blue;
+          }
+
+          #phase1 {
+            position: absolute;
+            top: -50px;
+            left: 440px;
+            width: 150px;
+          }
+
+          #phase1:hover {
+            transform: rotate(20deg);
+          }
+
+          #phase2 {
+            position: absolute;
+            top: 110px;
+            left: 150px;
+            width: 150px;
+          }
+
+          #phase2:hover {
+            transform: rotate(-20deg);
+          }
+
+          #phase3 {
+            position: absolute;
+            bottom: -200px;
+            width: 180px;
+          }
+
+          #phase3:hover {
+            transform: translate(35px);
+          }
+
+
+          #phase4 {
+            position: absolute;
+            bottom: -460px;
+            left: 400px;
+            width: 250px;
+          }
+
+          #phase4:hover {
+            transform: translate(35px, -35px);
+          }
+
+          #phase5 {
+            position: absolute;
+            bottom: -180px;
+            right: 120px;
+            width: 270px;
+          }
+
+          #phase5:hover {
+            transform: scale(1.2, 1.2);
+          }
+
+          </style>
+        </head>
+        <body>
+        <img id=spring src=spring.jpg>
+        <a id=phase1 href="https://youtu.be/qlOppyoQb8c"><img src="phase1.png"></a>
+        <!-- https://youtu.be/qlOppyoQb8c -->
+        <a id=phase2 href="https://youtu.be/Ofr4T6EiWk8"><img src="phase2.png"></a>
+        <!-- https://youtu.be/Ofr4T6EiWk8 -->
+        <a id=phase3 href="https://www.brown.edu/news/2017-09-28/virtual"><img src="phase3.png"></a>
+        <!-- https://www.brown.edu/news/2017-09-28/virtual -->
+        <a id=phase4 href="https://greenweddingshoes.com/top-26-coolest-wedding-venues/"><img src="phase4.png"></a>
+        <!-- https://greenweddingshoes.com/top-26-coolest-wedding-venues/ -->
+        <a id=phase5 href="https://youtu.be/MfdsECaL5cY"><img src="phase5.png"></a>
+        <!-- https://youtu.be/MfdsECaL5cY -->
+          <div id=A>Life is a journey, <br>From the first cry of a <span id=baby >baby</span> <br>to the last sigh of the <span id=old >old</span>, <br>Human life is doomed to be a journey<br>towards death. </div>
+          <div id=B>In this long road, <br>No life will be <span id=eternal ><a id=moonmystery href=moonmystery.html > eternal </a> </span> </div>
+          <div id=C>The <span id=past >past</span> is abandoned, <br>The <span id=future >future</span> is opening, <br>The <span id=present >present</span> is the most important thing <br>to care about.</div>
+        </body>
+      </html>
